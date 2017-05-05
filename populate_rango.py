@@ -1,5 +1,5 @@
 import os
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tango_withdjango_project.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tango_with_django_project.settings')
 
 import django
 django.setup()
@@ -31,7 +31,7 @@ def populate():
 	}
 
 	for cat, cat_data in cats.items():
-		c = add_cat(cat_
+		c = add_cat(cat)
 		for p in cat_data["pages"]:
 			add_page(c, p["title"], p["url"])
 
@@ -47,7 +47,7 @@ def add_page(cat, title, url, views=0):
 	return p
 
 def add_cat(name):
-	c = Category.object.get_or_create(name=name)[0]
+	c = Category.objects.get_or_create(name=name)[0]
 	c.save()
 	return c
 
