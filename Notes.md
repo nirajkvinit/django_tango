@@ -29,7 +29,7 @@ If you’re struggling to get the exercises done, the following hints will hopef
 * Also add the HTML to link back to the index page is into your response from the ```about()``` view ```<a href="/rango/">Index</a>```.
 * If you haven’t done so already, now’s a good time to head off and complete part one of the official Django Tutorial.
 
-
+---
 > # Chapter 4
 
 ## Basic Workflows
@@ -61,7 +61,7 @@ static files.
 picture of a cat and save it the media directory in a file called, cat.jpg.
 * In your about page, add in the ```<img>``` tag to display the picture of the cat, to ensure that your media is being served correctly.
 
-
+---
 > # Chapter 5
 
 ## Workflow: Model Setup
@@ -81,7 +81,13 @@ The workflow for adding models can be broken down into five steps.
 
 Invariably, there will be times when you will have to delete your database. When this happens, run the following commands from the ```manage.py``` module.
 1. migrate your database - this will set everything up in the new database. Ensure that your app is listed in the migrations that are committed. If it is not, run the ```makemigrations <app_name>``` command, where ```<app_name>``` is the name of your app.
-2. Create a new administrative account with the createsuperuser command.
+2. Create a new administrative account with the ```createsuperuser``` command. ```$ python manage.py createsuperuser```
+
+#### Creating and Updating Models/Tables
+Whenever you make changes to your app’s models, you need to register the changes via the ```makemigrations``` command in ```manage.py```. Specifying the rango app as our target, we then issue the following command from our Django project’s root directory. ```$ python manage.py makemigrations rango ```
+
+After you have created migrations for your app, you need to commit them to the database. Do so by once again issuing the migrate command. ```$ python manage.py migrate```
+
 
 ### Exercises
 Now that you’ve completed this chapter, try out these exercises to reinforce and practice
