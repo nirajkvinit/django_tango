@@ -22,8 +22,9 @@ Now that you have got Django and your new app up and running, give the following
 
 ## Hints
 If you’re struggling to get the exercises done, the following hints will hopefully provide you with some inspiration on how to progress.
-• In your ```views.py```, create a function called: ```def about(request):```, and have the function return a ```HttpResponse()```, insert your HTML inside this response.
-• The regular expression to match ```about/``` is ```r'^about/'``` - so in ```rango/urls.py``` add in a new mapping to the ```about()``` view.
-• Update your ```index()``` view to include a link to the about view. Keep it simple for now - something like Rango says hey there partner! ```<br/> <a href='/rango/about/'>About</a>```.
-• Also add the HTML to link back to the index page is into your response from the ```about()``` view ```<a href="/rango/">Index</a>```.
-• If you haven’t done so already, now’s a good time to head off and complete part one of the official Django Tutorial.
+
+* In your ```views.py```, create a function called: ```def about(request):```, and have the function return a ```HttpResponse()```, insert your HTML inside this response.
+* The regular expression to match ```about/``` is ```r'^about/'``` - so in ```rango/urls.py``` add in a new mapping to the ```about()``` view.
+* Update your ```index()``` view to include a link to the about view. Keep it simple for now - something like Rango says hey there partner! ```<br/> <a href='/rango/about/'>About</a>```.
+* Also add the HTML to link back to the index page is into your response from the ```about()``` view ```<a href="/rango/">Index</a>```.
+* If you haven’t done so already, now’s a good time to head off and complete part one of the official Django Tutorial.
