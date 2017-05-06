@@ -13,12 +13,13 @@ What you’ve just learnt in this chapter can be succinctly summarised into a li
 
 ## Exercises
 Now that you have got Django and your new app up and running, give the following exercises a go to reinforce what you’ve learnt. Getting to this stage is a significant landmark in working with Django. Creating views and mapping URLs to views is the first step towards developing more complex and usable Web applications.
-• Revise the procedure and make sure you follow how the URLs are mapped to views.
-• Create a new view method called about which returns the following HttpResponse: 'Rango says here is the about page.'
-• Map this view to /rango/about/. For this step, you’ll only need to edit the urls.py of the Rango application. Remember the /rango/ part is handled by the projects urls.py.
-• Revise the HttpResponse in the index view to include a link to the about page.
-• In the HttpResponse in the about view include a link back to the main page.
-• Now that you have started the book, follow us on Twitter @tangowithdjango, and let us know how you are getting on!
+
+* Revise the procedure and make sure you follow how the URLs are mapped to views.
+* Create a new view method called about which returns the following HttpResponse: 'Rango says here is the about page.'
+* Map this view to /rango/about/. For this step, you’ll only need to edit the urls.py of the Rango application. Remember the /rango/ part is handled by the projects urls.py.
+* Revise the HttpResponse in the index view to include a link to the about page.
+* In the HttpResponse in the about view include a link back to the main page.
+* Now that you have started the book, follow us on Twitter @tangowithdjango, and let us know how you are getting on!
 
 ## Hints
 If you’re struggling to get the exercises done, the following hints will hopefully provide you with some inspiration on how to progress.
@@ -28,3 +29,35 @@ If you’re struggling to get the exercises done, the following hints will hopef
 * Update your ```index()``` view to include a link to the about view. Keep it simple for now - something like Rango says hey there partner! ```<br/> <a href='/rango/about/'>About</a>```.
 * Also add the HTML to link back to the index page is into your response from the ```about()``` view ```<a href="/rango/">Index</a>```.
 * If you haven’t done so already, now’s a good time to head off and complete part one of the official Django Tutorial.
+
+
+> # Chapter 4
+
+## Basic Workflows
+With the chapter complete, you should now know how to setup and create templates, use templates within your views, setup and use the Django development server to serve static media files, and include images within your templates. We’ve covered quite a lot!
+Creating a template and integrating it within a Django view is a key concept for you to understand. It takes several steps, but will become second nature to you after a few attempts.
+1. First, create the template you wish to use and save it within the templates directory you specified in your project’s ```settings.py``` module. You may wish to use Django template variables (e.g. ```{{ variable_name }})``` or template tags within your template. You’ll be able to replace these with whatever you like within the corresponding view.
+2. Find or create a new view within an application’s ```views.py``` file.
+3. Add your view specific logic (if you have any) to the view. For example, this may involve extracting data from a database and storing it within a list.
+4. Within the view, construct a dictionary object which you can pass to the template engine as part of the template’s context.
+5. Make use of the ```render()``` helper function to generate the rendered response. Ensure you reference the request, then the template file, followed by the context dictionary.
+6. If you haven’t already done so, map the view to a URL by modifying your project’s ```urls.py``` file and the application specific ```urls.py``` file if you have one.
+
+The steps involved for getting a static media file onto one of your pages are part of another important process that you should be familiar with. Check out the steps below on how to do this.
+1. Take the static media file you wish to use and place it within your project’s static directory. This is the directory you specify in your project’s ```STATICFILES_DIRS``` list within ```settings.py```.
+2. Add a reference to the static media file to a template. For example, an image would be inserted into an HTML page through the use of the ```<img />``` tag.
+3. Remember to use the ```{% load staticfiles %}``` and ```{% static "<filename>" %}``` commands within the template to access the static files. Replace ```<filename>``` with the path to the image or resource you wish to reference. Whenever you wish to refer to a static file, use the static template tag!
+
+The steps for serving media files are similar to those for serving static media.
+1. Place a file within your project’s media directory. The media directory is specified by your project’s ```MEDIA_ROOT``` variable.
+2. Link to the media file in a template through the use of the ```{{ MEDIA_URL }}``` context variable. For example, referencing an uploaded image cat.jpg would have an ```<img />``` tag like ```<img src="{{ MEDIA_URL}}cat.jpg">```.
+
+## Exercises
+Give the following exercises a go to reinforce what you’ve learnt from this chapter.
+* Convert the about page to use a template as well, using a template called ```about.html```.
+* Within the new ```about.html``` template, add a picture stored within your project’s
+static files.
+* On the about page, include a line that says, This tutorial has been put together by <your-name>.
+* In your Django project directory, create a new directory called media, download a
+picture of a cat and save it the media directory in a file called, cat.jpg.
+* In your about page, add in the ```<img>``` tag to display the picture of the cat, to ensure that your media is being served correctly.
