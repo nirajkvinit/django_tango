@@ -69,7 +69,7 @@ picture of a cat and save it the media directory in a file called, cat.jpg.
 Now that we’ve covered the core principles of dealing with Django’s ORM, now is a good time to summarise the processes involved in setting everything up. We’ve split the core tasks into separate sections for you. Check this section out when you need to quickly refresh your mind of the different steps.
 
 ### Setting up your Database
-With a new Django project, you should first tell Django about the database you intend to use (i.e. configure DATABASES in ```settings.py```). You can also register any models in the ```admin.py``` module of your app to make them accessible via the admin interface.
+With a new Django project, you should first tell Django about the database you intend to use (i.e. configure ```DATABASES``` in ```settings.py```). You can also register any models in the ```admin.py``` module of your app to make them accessible via the admin interface.
 
 ### Adding a Model
 The workflow for adding models can be broken down into five steps.
@@ -116,5 +116,8 @@ instance!
 modify the line ```admin.site.register(Page)```. Change it to ```admin.site.register(Page, PageAdmin)``` in Rango’s ```admin.py``` file.
 
 ### Tests
-To run the tests, issue the following command in the terminal or Command Prompt.
-```$ python manage.py test rango```
+To run the tests, issue the following command in the terminal or Command Prompt. ```$ python manage.py test rango```
+
+
+---
+> # Chapter 5
