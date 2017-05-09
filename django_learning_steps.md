@@ -1,6 +1,6 @@
 
 #### Github Guides
-... [Github Guides](https://guides.github.com/)
+[Github Guides](https://guides.github.com/)
 
 ---
 
@@ -25,5 +25,12 @@ Examine some Django projects out in the wild. Fork them and play with them - Wha
 
 ----
 
-Web Development with Django Cookbook -28 January 2016
-by Aidas Bendoraitis
+- [ ] [Web Development with Django Cookbook - 28 January 2016 - by Aidas Bendoraitis](http://www.amazon.in/Web-Development-Django-Cookbook/dp/1785886770/)
+- [ ] [Two Scoops of Django: Best Practices for Django 1.8 - 2015 - by Daniel Roy Greenfeld, Audrey Roy Greenfeld](http://www.amazon.in/Two-Scoops-Django-Best-Practices/dp/0981467350/)
+- [ ] []()
+- [ ] []()
+- [ ] []()
+- [ ] []()
+- [ ] []()
+- [ ] []()
+* []()
