@@ -1,6 +1,12 @@
+
+#### Github Guides
+... [Github Guides] (https://guides.github.com/)
+
+---
+
 Here’s the progression that I found best for me:
 
-* Always start with the official Django tutorial -
+* [Always start with the official Django tutorial] (https://www.quora.com/What-is-the-fastest-way-to-learn-Django/answer/Mark-Dawson-20?srid=Cowl) -
   Writing your first Django app, part 1
 Continue to plow through in-depth tutorials. These authors kindly hold your hand while you learn to walk. This is where the bulk of your time will go -
 
@@ -17,3 +23,7 @@ Read about Django design patterns and best practices. The authors are letting go
 
 Examine some Django projects out in the wild. Fork them and play with them - What is the best Django source code available on the Internet for learning purposes?
 
+----
+
+Web Development with Django Cookbook -28 January 2016
+by Aidas Bendoraitis
