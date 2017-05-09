@@ -27,8 +27,12 @@ Examine some Django projects out in the wild. Fork them and play with them - Wha
 
 > #### Django Books
 
-- [ ] ![Web Development with Django Cookbook](http://ecx.images-amazon.com/images/I/51lLxHSqqGL._AC_US218_FMwebp_QL70_.jpg) [Web Development with Django Cookbook - 28 January 2016 - by Aidas Bendoraitis](http://www.amazon.in/Web-Development-Django-Cookbook/dp/1785886770/)
-- [ ] ![Two Scoops of Django: Best Practices for Django 1.8](http://ecx.images-amazon.com/images/I/51ERA5yTzaL._AC_US218_FMwebp_QL70_.jpg) [Two Scoops of Django: Best Practices for Django 1.8 - 2015 - by Daniel Roy Greenfeld, Audrey Roy Greenfeld](http://www.amazon.in/Two-Scoops-Django-Best-Practices/dp/0981467350/)
+> ![Web Development with Django Cookbook](http://ecx.images-amazon.com/images/I/51lLxHSqqGL._AC_US218_FMwebp_QL70_.jpg) 
+[Web Development with Django Cookbook - 28 January 2016 - by Aidas Bendoraitis](http://www.amazon.in/Web-Development-Django-Cookbook/dp/1785886770/)
+> [ ] ![Two Scoops of Django: Best Practices for Django 1.8](http://ecx.images-amazon.com/images/I/51ERA5yTzaL._AC_US218_FMwebp_QL70_.jpg) 
+[Two Scoops of Django: Best Practices for Django 1.8 - 2015 - by Daniel Roy Greenfeld, Audrey Roy Greenfeld](http://www.amazon.in/Two-Scoops-Django-Best-Practices/dp/0981467350/)
+
+
 - [ ] ![Django by Example](http://ecx.images-amazon.com/images/I/51uqD5rw1SL._AC_US218_FMwebp_QL70_.jpg) [Django by Example - 30 November 2015 - by Antonio Mele](http://www.amazon.in/Django-Example-Antonio-Mele/dp/1784391913/)
 - [ ] ![Lightweight Django: Using Rest, Websockets & Backbone](http://ecx.images-amazon.com/images/I/51JgF8WtR4L._AC_US218_FMwebp_QL70_.jpg) [Lightweight Django: Using Rest, Websockets & Backbone - 1 July 2014 - by Mark Lavin](http://www.amazon.in/Lightweight-Django-Using-Websockets-Backbone/dp/9351108651/)
 - [ ] ![Django: Web Development with Python](http://ecx.images-amazon.com/images/I/51p0J7mYnnL._AC_US218_FMwebp_QL70_.jpg) [Django: Web Development with Python - 31 August 2016 - by Samuel Dauzon and Aidas Bendoraitis](http://www.amazon.in/Django-Development-Python-Samuel-Dauzon/dp/1787121380/)
