@@ -1,12 +1,12 @@
 
 #### Github Guides
-... [Github Guides] (https://guides.github.com/)
+... [Github Guides](https://guides.github.com/)
 
 ---
 
 Here’s the progression that I found best for me:
 
-* [Always start with the official Django tutorial] (https://www.quora.com/What-is-the-fastest-way-to-learn-Django/answer/Mark-Dawson-20?srid=Cowl) -
+* [Always start with the official Django tutorial](https://www.quora.com/What-is-the-fastest-way-to-learn-Django/answer/Mark-Dawson-20?srid=Cowl) -
   Writing your first Django app, part 1
 Continue to plow through in-depth tutorials. These authors kindly hold your hand while you learn to walk. This is where the bulk of your time will go -
 
