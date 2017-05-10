@@ -1,13 +1,14 @@
-
-    <h1>Rango says...</h1>
-    <div class="">
-      Hey there partner! <br>
-      <strong>{{ boldmessage }}</strong><br>
-    </div>
-    <div class="">
-      <a href="/rango">Home</a>
-      <h3>THis is about Page</h3>
-    </div>
-    <p>This tutorial has been put together by Leif Azzopardi.</p>
-    <img src="{{MEDIA_URL}}cat.jpg" alt="">
-  
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
+{% block title_block %}
+  About Rango
+{% endblock %}
+{% block body_block %}
+  <h1>Rango says...</h1>
+  <div class="">
+    Hey there partner! <br>
+    <strong>{{ boldmessage }}</strong><br>
+  </div>
+  <p>This tutorial has been put together by Leif Azzopardi.</p>
+  <img src="{{MEDIA_URL}}cat.jpg" alt="">
+{% endblock %}

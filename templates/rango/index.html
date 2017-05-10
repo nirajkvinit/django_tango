@@ -1,41 +1,47 @@
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
 
-    <h1>Rango says...</h1>
-    <div class="">
-      Hey there partner!
-    </div><hr>
-    <div class="">
-      <h3>Most Liked Categories</h3>
-      {% if categories %}
+{% block title_block %}
+  About Rango
+{% endblock %}
+
+{% block body_block %}
+  <h1>Rango says...</h1>
+  <div class="">
+    Hey there partner!
+  </div><hr>
+  <div class="">
+    <h3>Most Liked Categories</h3>
+    {% if categories %}
+    <ul>
+      {% for category in categories %}
+        <li>
+          <a href="{% url 'show_category' category.slug %}">{{ category.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+      <strong>There are no categories present.</strong><br>
+    {% endif %}
+  </div>
+  <a href="{% url 'add_category' %}">Add a New Category</a>
+  <hr>
+  <div class="">
+    <h3>Most Viewed Pages</h3>
+    {% if pages %}
       <ul>
-        {% for category in categories %}
+        {% for page in pages %}
           <li>
-            <a href="/rango/category/{{ category.slug }}">{{ category.name }} ({{ category.likes }})</a>
+            <a href="{{ page.url }}">{{ page.title }} ({{ page.views }})</a>
           </li>
         {% endfor %}
       </ul>
-      {% else %}
-        <strong>There are no categories present.</strong><br>
-      {% endif %}
-    </div>
-    <a href="/rango/add_category/">Add a New Category</a>
-    <hr>
-    <div class="">
-      <h3>Most Viewed Pages</h3>
-      {% if pages %}
-        <ul>
-          {% for page in pages %}
-            <li>
-              <a href="{{ page.url }}">{{ page.title }} ({{ page.views }})</a>
-            </li>
-          {% endfor %}
-        </ul>
-      {% endif %}
+    {% endif %}
 
-    </div>
+  </div>
 
-    <div class="">
-      <a href="/rango/about">About</a><br>
-      <img src="{% static "images/rango.jpg" %}" alt="">
-      <p>This tutorial has been put together by Leif Azzopardi.</p>
-    </div>
-  
+  <div class="">
+    <img src="{% static "images/rango.jpg" %}" alt="">
+    <p>This tutorial has been put together by Leif Azzopardi.</p>
+  </div>
+{% endblock %}
