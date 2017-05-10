@@ -3,12 +3,10 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 
-from rango.models import Category
+from rango.models import Category, Page
 
-from rango.models import Page
+from rango.forms import CategoryForm, PageForm
 
-from rango.forms import CategoryForm
-from rango.forms import PageForm
 
 def index(request):
     pages_list = Page.objects.order_by('-views')[:20]
