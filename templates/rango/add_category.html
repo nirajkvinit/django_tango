@@ -4,18 +4,22 @@
 {% endblock %}
 {% block body_block %}
   <h1>Add a Category</h1>
-  <div class="">
-    <form id="category_form" class="" action="{% url 'add_category' %}" method="post">
-      {% csrf_token %}
-      {% for hidden in form.hidden_fields %}
-        {{ hidden }}
-      {% endfor %}
-      {% for field in form.visible_fields %}
-        {{ field.errors }}
-        {{ field.help_text }}
-        {{ field }}
-      {% endfor %}
-      <input type="submit" name="submit" value="Create Category">
-    </form>
-  </div>
+  {% if user.is_authenticated %}
+    <div class="">
+      <form id="category_form" class="" action="{% url 'add_category' %}" method="post">
+        {% csrf_token %}
+        {% for hidden in form.hidden_fields %}
+          {{ hidden }}
+        {% endfor %}
+        {% for field in form.visible_fields %}
+          {{ field.errors }}
+          {{ field.help_text }}
+          {{ field }}
+        {% endfor %}
+        <input type="submit" name="submit" value="Create Category">
+      </form>
+    </div>
+  {% else %}
+    <p>You need to sign in before you can create a category.</p>
+  {% endif %}
 {% endblock %}

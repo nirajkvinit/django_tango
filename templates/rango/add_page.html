@@ -7,22 +7,26 @@
   <h1>Add a Page to {{ category.name }}</h1>
   {% if category %}
     <div class="">
-      <form id="page_form" class="" action="{% url 'add_page' category.slug %}" method="post">
-        {% csrf_token %}
-        {% for hidden in form.hidden_fields %}
-          {{ hidden }}
-        {% endfor %}
+      {% if user.is_authenticated %}
+        <form id="page_form" class="" action="{% url 'add_page' category.slug %}" method="post">
+          {% csrf_token %}
+          {% for hidden in form.hidden_fields %}
+            {{ hidden }}
+          {% endfor %}
 
-        {% for field in form.visible_fields %}
-          {{ field.errors }}
-          {{ field.help_text }}
-          <br>
-          {{ field }}
-          <br>
-          <br>
-        {% endfor %}
-        <input type="submit" name="submit" value="Create Page">
-      </form>
+          {% for field in form.visible_fields %}
+            {{ field.errors }}
+            {{ field.help_text }}
+            <br>
+            {{ field }}
+            <br>
+            <br>
+          {% endfor %}
+          <input type="submit" name="submit" value="Create Page">
+        </form>
+      {% else %}
+        <p><strong>You need to login before you can add a page.</strong></p>
+      {% endif %}
     </div>
   {% else %}
     <strong>The specified category does not exist!</strong><br>
