@@ -1,54 +1,50 @@
 {% extends 'rango/base.html' %}
 {% load staticfiles %}
-
 {% block title_block %}
-  About Rango
+  Index
 {% endblock %}
-
 {% block body_block %}
-  <h1>Rango says...</h1>
-  <div class="">
+  <div class="jumbotron">
+    <h1 class="display-3">Rango says...</h1>
     {% if user.is_authenticated %}
-      howdy {{ user.username }}!
+      <h1>hey there {{ user.username }}!</h1>
     {% else %}
-      hey there partner!
-    {% endif %}
-  </div><hr>
-  <div class="">
-    <h3>Most Liked Categories</h3>
-    {% if categories %}
-    <ul>
-      {% for category in categories %}
-        <li>
-          <a href="{% url 'show_category' category.slug %}">{{ category.name }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-    {% else %}
-      <strong>There are no categories present.</strong><br>
+      <h1>hey there partner! </h1>
     {% endif %}
   </div>
-  {% if user.is_authenticated %}
-    <a href="{% url 'add_category' %}">Add a New Category</a>
-  {% endif %}
+
+  <div class="row marketing">
+    <div class="col-lg-6">
+      <h4>Most Liked Categories</h4>
+      <p>
+        {% if categories %}
+          <ul>
+            {% for category in categories %}
+              <li><a href="{% url 'show_category' category.slug %}">{{ category.name }}</a></li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <strong>There are no categories present.</strong>
+        {% endif %}
+      </p>
+    </div>
+    <div class="col-lg-6">
+      <h4>Most Viewed Pages</h4>
+      <p>
+        {% if pages %}
+          <ul>
+            {% for page in pages %}
+              <li><a href="{{ page.url }}">{{ page.title }} ({{ page.views }})</a></li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <strong>There are no categories present.</strong>
+        {% endif %}
+      </p>
+    </div>
+  </div>
   <hr>
-  <div class="">
-    <h3>Most Viewed Pages</h3>
-    {% if pages %}
-      <ul>
-        {% for page in pages %}
-          <li>
-            <a href="{{ page.url }}">{{ page.title }} ({{ page.views }})</a>
-          </li>
-        {% endfor %}
-      </ul>
-    {% endif %}
-
-  </div>
-
-  <div class="">
-    <img src="{% static "images/rango.jpg" %}" alt="">
-    <p>This tutorial has been put together by Leif Azzopardi.</p>
-    <p>Visits: {{ visits }}</p>
-  </div>
+  <img src="{% static "images/rango.jpg" %}" alt="Picture of Rango" />
+  <p>This tutorial has been put together by Leif Azzopardi.</p>
+  <p>Visits: {{ visits }}</p>
 {% endblock %}
